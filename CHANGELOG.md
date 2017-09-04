@@ -8,6 +8,8 @@ Features:
 
 Fixes:
 
+- [#2172](https://github.com/rails-api/active_model_serializers/pull/2172) Preserve the namespace when falling back to a superclass serializer
+
 Misc:
 
 ### [v0.10.9 (2019-02-08)](https://github.com/rails-api/active_model_serializers/compare/v0.10.8...v0.10.9)

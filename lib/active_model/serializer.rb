@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'thread_safe'
 require 'jsonapi/include_directive'
 require 'active_model/serializer/collection_serializer'
 require 'active_model/serializer/array_serializer'
@@ -73,7 +72,7 @@ module ActiveModel
     # Used to cache serializer name => serializer class
     # when looked up by Serializer.get_serializer_for.
     def self.serializers_cache
-      @serializers_cache ||= ThreadSafe::Cache.new
+      @serializers_cache ||= Concurrent::Map.new
     end
 
     # @api private
